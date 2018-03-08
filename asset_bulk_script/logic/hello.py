@@ -17,7 +17,8 @@ def health_check():
     """
     try:
         db.execute("SELECT * FROM label_status");
-    except SQLAlchemyError:
+    except SQLAlchemyError as err:
+        print("OS error: {0}".format(err))
         return response.create_error_response(
             code='Internal Server Error',
             message='could not connect to psql',

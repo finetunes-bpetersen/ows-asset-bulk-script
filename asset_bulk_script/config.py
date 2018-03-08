@@ -10,7 +10,7 @@ from sqlalchemy.pool import StaticPool
 
 
 # Load environment variables from a .env file
-dotenv.load('../.env')
+dotenv.load('/home/spring/PycharmProjects/ows-asset-bulk-script/.env')
 
 pt = os.getcwd()
 
@@ -43,14 +43,13 @@ DB_CREDENTIALS = {
 }
 
 DB_URL = (
-    'postgres://{user}:{password}@{host}:{port}/{db}?charset={charset}'
+    'postgres://{user}:{password}@{host}:{port}/{db}'
     .format(
         user=DB_CREDENTIALS.get('user'),
         password=DB_CREDENTIALS.get('password'),
         host=DB_CREDENTIALS.get('host'),
         port=DB_CREDENTIALS.get('port'),
-        db=DB_CREDENTIALS.get('database'),
-        charset='utf8'))
+        db=DB_CREDENTIALS.get('database')))
 
 path = os.path.dirname(os.path.dirname(__file__))
 

@@ -1,0 +1,4 @@
+.env
+.idea/
+asset_bulk_script/__pycache__/
+asset_bulk_script/logic/__pycache__/
