@@ -1,0 +1,9 @@
+
+
+Flask==0.10
+jsonschema==2.5.1
+oto==1.0.1
+PyMySQL==0.6.3
+python-env==1.0.0
+SQLAlchemy==1.0
+psycopg2==2.7.4
